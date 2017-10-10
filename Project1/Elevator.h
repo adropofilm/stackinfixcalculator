@@ -9,12 +9,13 @@
 using namespace std;
 
 class Elevator
+    
 {
 public:
         Elevator(){ location = 0,direction = "up"; }//elevator starts on ground floor
-        list <Rider> riders;
-        int destination, location;
-        string direction;
+        list <Rider> riders;//list of riders on elevator
+        int destination, location;//where elevator is going, where its at
+        string direction;//up or down
         //getters
         int get_destination() { return destination; }
         int get_location() { return location; }
@@ -23,5 +24,8 @@ public:
         void set_destination(int i) { destination = i; }
         void set_location(int i) { location = i; }
         void set_direction(string s) { direction = s; }
+        
+        void go_up() { location += 1; }//moves elevator up one floor
+        void go_down() { location -= 1; }//moves elevator down one floor
 
 };
