@@ -24,5 +24,8 @@ public:
         void set_destination(int i) { destination = i; }
         void set_location(int i) { location = i; }
         void set_direction(string s) { direction = s; }
+        
+        void go_up() { location += 1; }//moves elevator up one floor
+        void go_down() { location -= 1; }//moves elevator down one floor
 
 };
